@@ -7,16 +7,14 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chatpsp_pablo_fernando.VChat">
    <children>
       <HBox id="HVOX_Padre" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black; -fx-border-color: black;" stylesheets="@styleInicioSesion.css">
          <children>
             <ScrollPane id="SCROLLPa_UsuariosConectados" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;">
-              <content>
-                <AnchorPane id="ANCHORPa_UsuariosConectados" minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="147.0" styleClass="fondoChat" stylesheets="@styleInicioSesion.css" />
-              </content>
-            </ScrollPane>
+               <content>
+                  <VBox id="VBox_UsuariosConectados" prefHeight="398.0" prefWidth="147.0" styleClass="fondoChat" stylesheets="@styleInicioSesion.css" />
+               </content></ScrollPane>
             <VBox id="VBOX_Chat" prefHeight="396.0" prefWidth="474.0">
                <children>
                   <ScrollPane id="SCROLLPa_Chat" prefHeight="334.0" prefWidth="437.0" styleClass="fondoChat" stylesheets="@styleInicioSesion.css">

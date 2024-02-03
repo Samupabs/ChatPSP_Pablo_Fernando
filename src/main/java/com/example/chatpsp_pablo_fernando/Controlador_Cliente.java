@@ -4,6 +4,9 @@ import Modelos.Cliente;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Controlador_Cliente {
     /*-Conectarse al server
      * -Recibir listado de usuarios desde el Servidor
@@ -19,5 +22,8 @@ public class Controlador_Cliente {
 
     @FXML
     private Cliente Usuario;
+
+    @FXML
+    private List<Cliente> listadoUsuariosConectados = new ArrayList<>();
 
 }
