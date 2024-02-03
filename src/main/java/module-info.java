@@ -5,4 +5,6 @@ module com.example.chatpsp_pablo_fernando {
 
     opens com.example.chatpsp_pablo_fernando to javafx.fxml;
     exports com.example.chatpsp_pablo_fernando;
+    exports Modelos;
+    opens Modelos to javafx.fxml;
 }
