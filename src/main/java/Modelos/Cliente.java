@@ -1,35 +1,23 @@
 package Modelos;
 
 import java.io.IOException;
+import java.net.ConnectException;
 import java.net.Socket;
 
 public class Cliente {
-    public static void main(String[] args) {
 
-        Cliente prueba = null;
-        String host = "localhost";
-        int puerto = 6000;
-
-        try {
-            prueba = new Cliente("Fernando", host, puerto);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        System.out.println(prueba);
-        prueba.setID(143);
-        System.out.println(prueba);
-
-    }
     private int ID;
     private String nombre;
     private Socket conexion;
 
     //El @ID se obtiene de manera secuencial cuando entra el cliente al servidor para evitar que se repita
 
-    public Cliente(String nombre, String host, int puerto) throws IOException {
+    public Cliente(String nombre, String host, int puerto) throws IOException, ConnectException {
         this.ID = 0;
         setNombre(nombre);
         this.conexion = new Socket(host,puerto);
+        //writeUTF con get.nombre
+        //readUTF el nuevo id y llamo a setID
     }
 
     @Override
